@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/d8212502a8.js" crossorigin="anonymous"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="index.css">
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">ColorSchemeGenerator</a></li>
+            <div class="mode-select">
+                <li id="light-mode"><i class="fa-solid fa-sun pointer"></i></li>
+                <li id="dark-mode"><i class="fa-solid fa-moon pointer"></i></li>
+            </div>
+        </ul>
+    </nav>
+    <main>
+        <div class="color-scheme-container" id="color-scheme-container">
+                <form id="color-picker-form">
+                    <input type="color" class="pointer" id="color-input">
+                    <select name="color-scheme-mode" id="color-scheme-mode" class="pointer">
+                        <option value="monochrome">Monochrome</option>
+                        <option value="monochrome-dark">Monochrome-dark</option>
+                        <option value="monochrome-light">Monochrome-light</option>
+                        <option value="analogic">Analogic</option>
+                        <option value="complement">Complement</option>
+                        <option value="analogic-complement">Analogic-complement</option>
+                        <option value="triad">Triad</option>
+                    </select>
+                    <button class="get-color-scheme-btn small pointer" id="get-color-scheme-btn" type="submit">Get color scheme</button>
+                </form>
+            <div class="color-scheme" id="color-scheme"></div>
+        </div>
+    </main>
+    <div class="modal" id="modal">
+        <h1 id="modal-alert"></h1>
+        <button type="button" class="close-modal-btn pointer" id="close-modal-btn">Okay</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
