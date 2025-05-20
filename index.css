@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: #d5d4d8;
+}
+
+/* Typography */
+select, option {
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    transition: .5s;
+}
+
+a:hover, a:focus {
+    color: #d5d4d8;
+}
+
+/* Layout */
+nav {
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0 auto;
+    padding: 24px 12px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #548254;
+}
+
+ul li > * {
+    color: #fff;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+ul .mode-select {
+    display: flex;
+    gap: 0.5em;
+}
+
+.color-scheme-container {
+    max-width: 550px;
+    margin: 0 auto;
+    background-color: #1f2937;
+}
+
+.color-scheme-container form {
+    padding: 0.75em;
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75em;
+}
+
+.color-scheme-container form select, .color-scheme-container form button {
+    padding: 0.5em;
+}
+
+.color-scheme-container form > * {
+    border-radius: 4px;
+}
+
+input[type="color"] {
+    background-color: #e5e5e5;
+    height: 40px;
+    border: none;
+}
+
+.color-scheme-container form select {
+    flex-grow: 1;
+    background-color: #1f2937;
+    border: 1px solid #d1d5db;
+}
+
+.get-color-scheme-btn {
+    color: #fff;
+    background-color: #3d4b60;
+    border: none;
+    transition: .5s;
+}
+
+.get-color-scheme-btn:hover,
+.get-color-scheme-btn:focus {
+    background-color: #46546a;
+}
+
+.color-scheme {
+    display: flex;
+}
+
+.color-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.color {
+    height: 420px;
+}
+
+.color-footer {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal {
+    padding: 24px;
+    background-color: #1f2937;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 300px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 12px #000;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.close-modal-btn {
+    padding: 12px;
+    background-color: #548254;
+    border: none;
+    border-radius: 30px;
+    font-weight: 900;
+    transition: .5s;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+    background-color: #365a36;
+}
+
+/* Utilities */
+.small {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.pointer {
+    cursor: pointer;
+}
