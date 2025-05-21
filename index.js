@@ -1,6 +1,7 @@
 const colorPickerForm = document.getElementById("color-picker-form");
 const modal = document.getElementById("modal");
 const modalAlert = document.getElementById("modal-alert");
+const main = document.querySelector("main");
 
 function renderColors(colorsArr) {
     let tempString = "";
@@ -36,9 +37,11 @@ document.addEventListener("click", (e) => {
         navigator.clipboard.writeText(`#${e.target.id}`);
         modal.style.display = "flex";
         modalAlert.textContent = `Hex value: #${e.target.id} copied to clipboard.`;
+        main.style.opacity = "0.5";
     }
     if (e.target.id === "close-modal-btn") {
         modal.style.display = "none";
+        main.style.opacity = "1";
     }
 });
 
