@@ -155,6 +155,10 @@ input[type="color"] {
     cursor: pointer;
 }
 
+.active {
+    color: #000;
+}
+
 @media (min-width: 768px) {
     .color-container {
         width: 100vw;
